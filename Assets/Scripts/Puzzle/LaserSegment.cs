@@ -20,8 +20,6 @@ namespace Puzzle
         
         public List<LaserSegment> Children = new List<LaserSegment>();
 
-        public int Count => 1 + Children.Sum(it => it.Count);
-
         public LaserSegment(Ray ray, int depth, LaserColor color)
         {
             Ray = ray;
