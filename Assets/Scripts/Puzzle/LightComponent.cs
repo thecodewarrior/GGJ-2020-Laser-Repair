@@ -11,7 +11,6 @@ namespace Puzzle
         
         public void EmitSegment(LaserSegment segment)
         {
-            var colliders = GetComponents<Collider>();
             RaycastHit hitInfo;
             bool hit;
             Ray hitRay = segment.Ray;
@@ -30,8 +29,9 @@ namespace Puzzle
             }
             if (hit)
             {
-                // hitInfo.direction will be incorrect if there were self-collisions
-                segment.Length = (hitInfo.point - segment.Ray.origin).magnitude; 
+                // hitInfo.direction will be incorrect if there were self-collisions, so we calculate it
+                segment.Length = (hitInfo.point - segment.Ray.origin).magnitude;
+                segment.ImpactNormal = hitInfo.normal;
                 var lightComponent = hitInfo.collider.gameObject.GetComponent<LightComponent>();
                 if (lightComponent && segment.Depth < 100)
                 {
