@@ -11,7 +11,7 @@ namespace Utils
 
         void Update()
         {
-            if (Application.IsPlaying(gameObject)) return;
+            // if (Application.IsPlaying(gameObject)) return;
             
             var offset = transform.TransformVector(localOffset);
 
