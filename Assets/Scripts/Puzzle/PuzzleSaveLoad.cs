@@ -27,19 +27,20 @@ namespace Puzzle
             };
         }
 
-        public string LevelPath(string levelName) => Application.dataPath + "/Resources/Levels/" + levelName + ".json";
+        private string _levelPath => Application.dataPath + "/Resources/Levels/";
+        public string LevelPath(string levelName) => _levelPath + levelName + ".json";
         
         public void SaveLevel(string levelName)
         {
-            if (!Application.isEditor) return;
             var json = JsonUtility.ToJson(SaveData());
+            System.IO.Directory.CreateDirectory(levelName);
             System.IO.File.WriteAllText(LevelPath(levelName), json);
         }
 
         public void LoadLevel(string levelName)
         {
             string json = null;
-            if (Application.isEditor && System.IO.File.Exists(LevelPath(levelName)))
+            if (System.IO.File.Exists(LevelPath(levelName)))
             {
                 json = System.IO.File.ReadAllText(LevelPath(levelName));
             } 

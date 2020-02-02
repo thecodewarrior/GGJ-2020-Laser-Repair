@@ -36,6 +36,7 @@ namespace Puzzle
                 var rot = selection.transform.localRotation;
                 rot.eulerAngles = euler;
                 selection.transform.localRotation = rot;
+                FXManager.PlaySound("socket_spin");
             }
         }
 

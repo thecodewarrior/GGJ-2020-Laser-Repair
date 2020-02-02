@@ -22,10 +22,12 @@ namespace Puzzle
 
         private void FixedUpdate()
         {
+            if (!color) return;
             var segment = new LaserSegment(new Ray(transform.position, transform.right), 0, color);
             EmitSegment(segment);
             laserRenderer.UpdateSegment(segment);
             DebugSegment(segment);
+            GetComponent<FXRequests>().requests.Add("beam_idle");
         }
 
         private void DebugSegment(LaserSegment segment)

@@ -14,8 +14,17 @@ namespace Puzzle
             set => color = value;
         }
 
+        private bool wasOn;
+        private bool turnedOff;
+
         private void FixedUpdate()
         {
+            if (turnedOff && wasOn)
+            {
+                FXManager.PlaySound("target_power_down");
+                wasOn = false;
+            }
+            turnedOff = true;
             var rot = transform.localRotation;
             rot.eulerAngles = new Vector3(0, 0, 0);
             transform.localRotation = rot;
@@ -28,6 +37,16 @@ namespace Puzzle
                 var rot = transform.localRotation;
                 rot.eulerAngles = new Vector3(90, 0, 0);
                 transform.localRotation = rot;
+                turnedOff = false;
+                if (wasOn == false)
+                {
+                    FXManager.PlaySound("target_power_up");
+                }
+                wasOn = true;
+            }
+            else
+            {
+                
             }
         }
     }

@@ -53,6 +53,7 @@ namespace Puzzle
             pickupPos = transform.position;
             offset = transform.position - RaycastPlane();
             UpdatePosition(true);
+            FXManager.PlaySound("socket_lift");
         }
 
         void OnMouseDrag()
@@ -69,6 +70,7 @@ namespace Puzzle
             {
                 _selectionHandler.Select(this);
             }
+            FXManager.PlaySound("socket_drop");
         }
 
         private void UpdatePosition(bool lifted)
