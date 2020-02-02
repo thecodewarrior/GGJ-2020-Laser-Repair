@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad15b4d403b4fbfbd9ef785477bdab0, type: 3}
   m_Name: Green
   m_EditorClassIdentifier: 
+  id: green
   material: {fileID: 2100000, guid: 40fb63522b24741659b7b64fee11e79d, type: 2}
   width: 0.5

@@ -73,6 +73,7 @@ GameObject:
   - component: {fileID: 4901117033902558054}
   - component: {fileID: 8249936860153652478}
   - component: {fileID: 5128985634819522234}
+  - component: {fileID: 4317891474969158456}
   m_Layer: 0
   m_Name: Mirror
   m_TagString: Untagged
@@ -183,3 +184,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridName: Components
   localOffset: {x: 0, y: 0, z: 0}
+--- !u!114 &4317891474969158456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2292903371326326548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23c9a744d475447591d29b2cf7ba295f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: mirror
