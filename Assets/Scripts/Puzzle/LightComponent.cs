@@ -33,7 +33,7 @@ namespace Puzzle
                 segment.Length = (hitInfo.point - segment.Ray.origin).magnitude;
                 segment.ImpactNormal = hitInfo.normal;
                 var lightComponent = hitInfo.collider.gameObject.GetComponent<LightComponent>();
-                if (lightComponent && segment.Depth < 100)
+                if (lightComponent && segment.Depth < 500)
                 {
                     lightComponent.Propagate(segment, hitInfo.collider);
                 }
