@@ -728,6 +728,17 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0aa246d1f33df47099239de2c7078070, type: 2}
   - {fileID: 11400000, guid: bcfb05597ee4c463c97cee721f279cac, type: 2}
   - {fileID: 11400000, guid: 5133963d342b448d8b288b757ed57062, type: 2}
+  colorSplit:
+  - input: {fileID: 11400000, guid: cbaa2d45e5f594a6ab4a6a7339e403b1, type: 2}
+    outputA: {fileID: 11400000, guid: 2e03fdaaa2db54e0bb086365cebe06d2, type: 2}
+    outputB: {fileID: 11400000, guid: b389e868f551e41568af867049a663a4, type: 2}
+  - input: {fileID: 11400000, guid: 0aa246d1f33df47099239de2c7078070, type: 2}
+    outputA: {fileID: 11400000, guid: bcfb05597ee4c463c97cee721f279cac, type: 2}
+    outputB: {fileID: 11400000, guid: 2e03fdaaa2db54e0bb086365cebe06d2, type: 2}
+  - input: {fileID: 11400000, guid: 5133963d342b448d8b288b757ed57062, type: 2}
+    outputA: {fileID: 11400000, guid: bcfb05597ee4c463c97cee721f279cac, type: 2}
+    outputB: {fileID: 11400000, guid: b389e868f551e41568af867049a663a4, type: 2}
+  colorMerges: []
 --- !u!1 &513170840
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,7 +1003,7 @@ BoxCollider:
   m_GameObject: {fileID: 717791335}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1000, y: 1000, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1610,6 +1621,9 @@ MonoBehaviour:
       type: 3}
   mirrorSerializer:
     prefab: {fileID: 2292903371326326548, guid: ac6630af48de84952b384458b42d43c9,
+      type: 3}
+  splitterSerializer:
+    prefab: {fileID: 2292903371326326548, guid: 0b2b68c52a7654339a7b6db343f2bae1,
       type: 3}
 --- !u!1001 &1450542109
 PrefabInstance:
@@ -2763,6 +2777,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 512434120426765576, guid: b2ae9b055eb9c4008bc7b37586d1a190,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 512434120426765576, guid: b2ae9b055eb9c4008bc7b37586d1a190,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 512434120426765576, guid: b2ae9b055eb9c4008bc7b37586d1a190,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 512434120426765576, guid: b2ae9b055eb9c4008bc7b37586d1a190,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 671402531792291953, guid: b2ae9b055eb9c4008bc7b37586d1a190,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -3446,6 +3480,26 @@ PrefabInstance:
     - target: {fileID: 3417345711092091424, guid: b2ae9b055eb9c4008bc7b37586d1a190,
         type: 3}
       propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3506837968964946830, guid: b2ae9b055eb9c4008bc7b37586d1a190,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3506837968964946830, guid: b2ae9b055eb9c4008bc7b37586d1a190,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3506837968964946830, guid: b2ae9b055eb9c4008bc7b37586d1a190,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3506837968964946830, guid: b2ae9b055eb9c4008bc7b37586d1a190,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3578050813201435872, guid: b2ae9b055eb9c4008bc7b37586d1a190,

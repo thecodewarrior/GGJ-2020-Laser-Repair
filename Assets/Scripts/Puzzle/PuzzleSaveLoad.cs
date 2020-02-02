@@ -12,6 +12,7 @@ namespace Puzzle
         public EmitterSerializer emitterSerializer;
         public ReceiverSerializer receiverSerializer;
         public MirrorSerializer mirrorSerializer;
+        public SplitterSerializer splitterSerializer;
         
         private Dictionary<string, ISerializer> _serializers;
 
@@ -21,7 +22,8 @@ namespace Puzzle
             {
                 ["emitter"] = emitterSerializer, 
                 ["receiver"] = receiverSerializer, 
-                ["mirror"] = mirrorSerializer
+                ["mirror"] = mirrorSerializer,
+                ["splitter"] = splitterSerializer
             };
         }
 
@@ -182,6 +184,22 @@ namespace Puzzle
 
     [Serializable]
     public class MirrorSerializer : ISerializer
+    {
+        public GameObject prefab;
+        public GameObject Prefab => prefab;
+
+        public string[] Save(GameObject gameObject)
+        {
+            return new string[0];
+        }
+
+        public void Load(GameObject gameObject, string[] data)
+        {
+        }
+    }
+    
+    [Serializable]
+    public class SplitterSerializer : ISerializer
     {
         public GameObject prefab;
         public GameObject Prefab => prefab;
