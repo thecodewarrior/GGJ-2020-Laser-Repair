@@ -7,6 +7,7 @@ namespace Puzzle
         public GameObject emitterPrefab;
         public GameObject receiverPrefab;
         public GameObject mirrorPrefab;
+        public GameObject splitterPrefab;
 
         public void CreateEmitter()
         {
@@ -21,6 +22,11 @@ namespace Puzzle
         public void CreateMirror()
         {
             Instantiate(mirrorPrefab);
+        }
+        
+        public void CreateSplitter()
+        {
+            Instantiate(splitterPrefab);
         }
     }
 }

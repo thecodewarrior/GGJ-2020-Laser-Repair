@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ad15b4d403b4fbfbd9ef785477bdab0, type: 3}
-  m_Name: Blue
+  m_Name: Magenta
   m_EditorClassIdentifier: 
   id: blue
-  material: {fileID: 2100000, guid: 1b84262d39aed4f99a28797267050414, type: 2}
+  material: {fileID: 2100000, guid: de232e7c813544dc3932c4866677d43b, type: 2}
   width: 0.15
