@@ -100,10 +100,12 @@ namespace Puzzle
                 }
             }
             
+            var table = FindObjectOfType<OpticalTable>();
+            
             return new PuzzleData
             {
-                height = 0,
-                width = 0,
+                width = table.width,
+                height = table.height,
                 objects = objects.ToArray()
             };
         }
@@ -115,6 +117,10 @@ namespace Puzzle
                 Destroy(marker.gameObject);
             }
 
+            var table = FindObjectOfType<OpticalTable>();
+            table.width = puzzleData.width;
+            table.height = puzzleData.height;
+            
             foreach (var objectData in puzzleData.objects)
             {
                 if (_serializers.ContainsKey(objectData.type))
