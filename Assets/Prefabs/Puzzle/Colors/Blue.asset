@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Blue
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 1b84262d39aed4f99a28797267050414, type: 2}
+  width: 0.25

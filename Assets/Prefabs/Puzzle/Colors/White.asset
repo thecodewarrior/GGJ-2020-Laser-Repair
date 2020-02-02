@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: White
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: ab6846aaec08d47a1b4fbb4f65501f62, type: 2}
+  width: 0.5

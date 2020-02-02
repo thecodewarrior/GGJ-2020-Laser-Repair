@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laserRenderer: {fileID: 7590376013239957814}
+  color: {fileID: 0}
 --- !u!33 &4448652939291980778
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -194,6 +195,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4423908865663195760}
+  - component: {fileID: 22037293003128662}
   m_Layer: 0
   m_Name: Emitter
   m_TagString: Untagged
@@ -217,3 +219,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &22037293003128662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8231617460572585201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b72e7193db95f43499b4d00865c34b7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridName: Walls
+  localOffset: {x: 0, y: 0, z: 0}

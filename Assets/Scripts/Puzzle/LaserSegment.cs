@@ -11,7 +11,6 @@ namespace Puzzle
         public Ray Ray;
         public int Depth;
         public LaserColor Color;
-        public float Width = 0.25f;
         
         public float3 EmissionNormal; 
         public float Length = Mathf.Infinity;

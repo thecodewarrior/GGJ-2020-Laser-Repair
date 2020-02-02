@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Red
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 44626d54587ba4107962382b3dbabc63, type: 2}
+  width: 0.25

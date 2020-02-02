@@ -102,8 +102,8 @@ namespace Puzzle
             var end = start + direction * distance;
             
             var up = math.cross(direction, cameraLook);
-            var top = start + up * segment.Width / 2;
-            var bottom = start - up * segment.Width / 2;
+            var top = start + up * segment.Color.width / 2;
+            var bottom = start - up * segment.Color.width / 2;
 
             var startTopDistance = IntersectLinePlane(top, direction, start, segment.EmissionNormal);
             var startBottomDistance = IntersectLinePlane(bottom, direction, start, segment.EmissionNormal);
@@ -137,9 +137,9 @@ namespace Puzzle
             normals.Add(normal);
             
             uvs.Add(vec(0, 0));
+            uvs.Add(vec(0, 1));
             uvs.Add(vec(1, 0));
             uvs.Add(vec(1, 1));
-            uvs.Add(vec(0, 1));
             
             triangles.Add(index + 1); // startBottom
             triangles.Add(index + 2); // endTop
