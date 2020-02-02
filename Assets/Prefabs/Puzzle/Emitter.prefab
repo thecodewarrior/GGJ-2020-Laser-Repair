@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 4423908865663195760}
   - component: {fileID: 1698479862781156216}
   - component: {fileID: 22037293003128662}
+  - component: {fileID: 5065931691795650185}
   - component: {fileID: 3689559471240026520}
   - component: {fileID: 3068615371473275133}
   m_Layer: 8
@@ -155,6 +156,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridName: Walls
   localOffset: {x: 0, y: 0, z: 0}
+--- !u!114 &5065931691795650185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8231617460572585201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 159e084f4d18478a9974685260247d64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialIndex: 1
+  noneMaterial: {fileID: 2100000, guid: d7ca9d2c2dbe24504a3b408fdf97689f, type: 2}
 --- !u!33 &3689559471240026520
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -182,6 +197,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
