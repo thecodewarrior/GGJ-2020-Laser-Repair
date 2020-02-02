@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7254159613016044045}
   - component: {fileID: 2211970768092409634}
   - component: {fileID: 4328957392559184558}
+  - component: {fileID: 1628745885748228709}
   m_Layer: 8
   m_Name: Receiver
   m_TagString: Untagged
@@ -72,8 +73,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.4
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.35
+  m_Center: {x: 0.06, y: 0, z: 0}
 --- !u!114 &4328957392559184558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,6 +88,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: receiver
+--- !u!114 &1628745885748228709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5426660172148771869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d00cec3c03b40d283fb21003c575db5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grid: {fileID: 0}
+  liftOffset: {x: 0, y: 0, z: -1}
+  pickupPos: {x: 0, y: 0, z: 0}
+  pickupTime: 0
 --- !u!1001 &3768094364243164481
 PrefabInstance:
   m_ObjectHideFlags: 0

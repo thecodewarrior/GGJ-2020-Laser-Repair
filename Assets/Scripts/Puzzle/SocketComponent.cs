@@ -16,6 +16,9 @@ namespace Puzzle
          private Vector3 offset;
      
          private Camera mainCamera;
+         
+        public Vector3 pickupPos;
+        public float pickupTime;
      
          void Start()
          {
@@ -37,7 +40,10 @@ namespace Puzzle
          
          void OnMouseDown()
          {
+             
              if (!grid) return;
+             pickupTime = Time.time;
+             pickupPos = transform.position;
              offset = transform.position - RaycastPlane();
              UpdatePosition(true);
          }
@@ -52,6 +58,14 @@ namespace Puzzle
          {
              if (!grid) return;
              UpdatePosition(false);
+             if (transform.position == pickupPos && Time.time - pickupTime < 1.0)
+             {
+                 var euler = transform.rotation.eulerAngles;
+                 euler.z += 45;
+                 var rot = transform.rotation;
+                 rot.eulerAngles = euler;
+                 transform.rotation = rot;
+             }
          }
 
          private void UpdatePosition(bool lifted)

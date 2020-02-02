@@ -9,6 +9,7 @@ namespace Puzzle
         public LaserRenderer laserRenderer;
         public LaserColor color;
 
+
         public override void Propagate(LaserSegment inputSegment)
         {
             // nop
@@ -16,7 +17,7 @@ namespace Puzzle
 
         private void FixedUpdate()
         {
-            var segment = new LaserSegment(new Ray(transform.position, transform.up), 0, color);
+            var segment = new LaserSegment(new Ray(transform.position, transform.right), 0, color);
             EmitSegment(segment);
             laserRenderer.UpdateSegment(segment);
             DebugSegment(segment);
