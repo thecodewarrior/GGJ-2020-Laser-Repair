@@ -12,6 +12,11 @@ namespace Puzzle
             _selectionHandler = FindObjectOfType<SelectionHandler>();
         }
 
+        public void Quit()
+        {
+            Application.Quit();
+        }
+
         public void Delete()
         {
             var selection = _selectionHandler.Selected;
