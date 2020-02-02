@@ -4,13 +4,18 @@ using UnityEngine.U2D;
 
 namespace Puzzle
 {
-    public class LaserEmitter : LightComponent
+    public class LaserEmitter : LightComponent, ColoredObject
     {
         public LaserRenderer laserRenderer;
         public LaserColor color;
+        
+        public LaserColor Color
+        {
+            get => color;
+            set => color = value;
+        }
 
-
-        public override void Propagate(LaserSegment inputSegment)
+        public override void Propagate(LaserSegment inputSegment, Collider collider)
         {
             // nop
         }
@@ -25,7 +30,7 @@ namespace Puzzle
 
         private void DebugSegment(LaserSegment segment)
         {
-            Debug.DrawRay(segment.Ray.origin, segment.Ray.direction * (float.IsInfinity(segment.Length) ? 1000 : segment.Length), Color.magenta);
+            Debug.DrawRay(segment.Ray.origin, segment.Ray.direction * (float.IsInfinity(segment.Length) ? 1000 : segment.Length), UnityEngine.Color.magenta);
             
             foreach (var child in segment.Children)
             {

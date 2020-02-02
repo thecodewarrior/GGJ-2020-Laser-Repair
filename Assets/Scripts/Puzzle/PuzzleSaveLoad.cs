@@ -149,7 +149,6 @@ namespace Puzzle
     {
         public GameObject prefab;
         public GameObject Prefab => prefab;
-        public LaserColor[] colors;
 
         public string[] Save(GameObject gameObject)
         {
@@ -161,7 +160,7 @@ namespace Puzzle
         {
             var emitter = gameObject.GetComponent<LaserEmitter>();
             if (data[0] != "NONE")
-                emitter.color = colors.First(it => it.id == data[0]);
+                emitter.color = ColorRegistry.GetColor(data[0]);
         }
     }
 

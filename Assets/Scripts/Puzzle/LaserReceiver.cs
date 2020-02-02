@@ -1,10 +1,34 @@
+using System;
+using UnityEngine;
+
 namespace Puzzle
 {
-    public class LaserReceiver : LightComponent
+    public class LaserReceiver : LightComponent, ColoredObject
     {
-        public override void Propagate(LaserSegment inputSegment)
+
+        public LaserColor color;
+
+        public LaserColor Color
         {
-            // nop (eventually this will trigger it)
+            get => color;
+            set => color = value;
+        }
+
+        private void FixedUpdate()
+        {
+            var rot = transform.localRotation;
+            rot.eulerAngles = new Vector3(0, 0, 0);
+            transform.localRotation = rot;
+        }
+
+        public override void Propagate(LaserSegment inputSegment, Collider collider)
+        {
+            if (inputSegment.Color == color)
+            {
+                var rot = transform.localRotation;
+                rot.eulerAngles = new Vector3(90, 0, 0);
+                transform.localRotation = rot;
+            }
         }
     }
 }

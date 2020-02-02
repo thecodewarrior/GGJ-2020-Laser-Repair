@@ -7,7 +7,7 @@ namespace Puzzle
         /**
          * Get a set of output rays given an input ray
          */
-        public abstract void Propagate(LaserSegment inputSegment);
+        public abstract void Propagate(LaserSegment inputSegment, Collider collider);
         
         public void EmitSegment(LaserSegment segment)
         {
@@ -35,7 +35,7 @@ namespace Puzzle
                 var lightComponent = hitInfo.collider.gameObject.GetComponent<LightComponent>();
                 if (lightComponent && segment.Depth < 100)
                 {
-                    lightComponent.Propagate(segment);
+                    lightComponent.Propagate(segment, hitInfo.collider);
                 }
             }
             else

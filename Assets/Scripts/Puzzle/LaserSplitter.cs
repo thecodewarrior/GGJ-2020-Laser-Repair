@@ -5,9 +5,9 @@ namespace Puzzle
 {
     public class LaserSplitter : LaserReflector
     {
-        public override void Propagate(LaserSegment inputSegment)
+        public override void Propagate(LaserSegment inputSegment, Collider collider)
         {
-            base.Propagate(inputSegment);
+            base.Propagate(inputSegment, collider);
 
             var transformedNormal = transform.TransformDirection(normal);
             var outputDirection = inputSegment.Ray.direction;

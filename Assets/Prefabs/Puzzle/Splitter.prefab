@@ -71,9 +71,9 @@ GameObject:
   - component: {fileID: 6890810484171141779}
   - component: {fileID: 7527798842555938234}
   - component: {fileID: 4901117033902558054}
-  - component: {fileID: 8249936860153652478}
   - component: {fileID: 5128985634819522234}
   - component: {fileID: 4317891474969158456}
+  - component: {fileID: 7714311149890618796}
   m_Layer: 0
   m_Name: Splitter
   m_TagString: Untagged
@@ -159,19 +159,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &8249936860153652478
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2292903371326326548}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5128985634819522234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,4 +185,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23c9a744d475447591d29b2cf7ba295f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: mirror
+  type: splitter
+--- !u!64 &7714311149890618796
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2292903371326326548}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: bd805834e6b784ab7a824639d64ae290, type: 3}

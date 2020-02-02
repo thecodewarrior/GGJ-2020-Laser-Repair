@@ -8,7 +8,7 @@ namespace Puzzle
         public Vector3 normal;
         public LaserColor colorOverride;
         
-        public override void Propagate(LaserSegment inputSegment)
+        public override void Propagate(LaserSegment inputSegment, Collider collider)
         {
             var transformedNormal = transform.TransformDirection(normal);
             var outputDirection = math.reflect(inputSegment.Ray.direction, transformedNormal);

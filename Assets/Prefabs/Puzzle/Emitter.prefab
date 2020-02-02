@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7590376013239957814}
   - component: {fileID: 6982930544300254560}
   - component: {fileID: 2675945741872781964}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Laser Renderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,8 @@ GameObject:
   - component: {fileID: 3068615371473275133}
   - component: {fileID: 2658585914848595074}
   - component: {fileID: 4226778108028297373}
-  m_Layer: 8
+  - component: {fileID: 7791977679181554344}
+  m_Layer: 0
   m_Name: Emitter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -248,3 +249,17 @@ MonoBehaviour:
   liftOffset: {x: 0, y: 0, z: -1}
   pickupPos: {x: 0, y: 0, z: 0}
   pickupTime: 0
+--- !u!64 &7791977679181554344
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8231617460572585201}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4684713559383613005, guid: da5d52ccbe592466f81a1063f9d70bce, type: 3}

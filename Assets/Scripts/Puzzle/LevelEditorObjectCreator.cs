@@ -28,5 +28,10 @@ namespace Puzzle
         {
             Instantiate(splitterPrefab);
         }
+        
+        public void DeleteCentral()
+        {
+            Instantiate(splitterPrefab);
+        }
     }
 }

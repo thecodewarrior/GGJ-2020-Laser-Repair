@@ -4,19 +4,19 @@ using UnityEngine;
 namespace Puzzle
 {
     [ExecuteAlways]
-    public class LaserEmitterIndicatorUpdate : MonoBehaviour
+    public class LaserColorIndicatorUpdate : MonoBehaviour
     {
         public int materialIndex;
         
         private void Update()
         {
-            var emitter = GetComponent<LaserEmitter>();
+            var emitter = GetComponent<ColoredObject>();
             var meshRenderer = GetComponent<MeshRenderer>();
             var mats = meshRenderer.sharedMaterials;
                 
-            if (emitter.color)
+            if (emitter.Color)
             {
-                mats[materialIndex] = emitter.color.material;
+                mats[materialIndex] = emitter.Color.material;
             }
             else
             {
